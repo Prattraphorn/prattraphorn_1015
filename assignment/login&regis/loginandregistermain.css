@@ -1,0 +1,114 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #fdd835, #e53935);
+    background-size: cover;
+    height: 1000px;
+    margin: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ตกแต่งฟอร์ม */
+form {
+    background-color: rgba(26, 26, 26, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px; /* ปรับขนาดให้เหมาะกับหน้าจอใหญ่ */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+/* จัดการกลุ่ม Gender */
+fieldset label[for="gender"] {
+    display: block;  /* แสดง Gender ในบรรทัดแยก */
+    margin-bottom: 10px;  /* เว้นระยะจากปุ่ม radio */
+}
+
+fieldset input[type="radio"] {
+    margin-right: 10px;  /* เว้นระยะห่างระหว่างปุ่มเลือกเพศ */
+}
+
+fieldset input[type="radio"] + label {
+    margin-right: 20px;  /* จัดระยะห่างระหว่างตัวเลือก Gender */
+}
+
+/* จัดการฟิลด์ Birthday */
+fieldset input[type="date"] {
+    margin-top: 10px; /* เว้นระยะจาก Gender */
+    margin-bottom: 20px; /* เว้นระยะห่างจากฟิลด์อื่น */
+    display: block; /* จัดให้ input date แสดงในบรรทัดของตัวเอง */
+}
+
+
+input[type="text"], input[type="password"], input[type="email"], input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid #fdd835;
+    background: transparent;
+    color: white;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+    color: #fdd835;
+}
+
+/* ปุ่ม */
+input[type="submit"], input[type="reset"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e53935;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #c62828;
+}
+
+input[type="reset"] {
+    background-color: #424242;
+    margin-top: 10px;
+}
+input[type="reset"]:hover {
+    background-color: #fdd835;
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+/* สำหรับหน้าจอขนาดกลาง (แท็บเล็ต) */
+@media (min-width: 481px) and (max-width: 1024px) {
+    form {
+        width: 80%;
+        max-width: 350px;
+    }
+}
+
+/* สำหรับหน้าจอขนาดใหญ่ (คอมพิวเตอร์) */
+@media (min-width: 1025px) {
+    form {
+        width: 50%;
+        max-width: 600px; /* ขยายฟอร์มสำหรับหน้าจอขนาดใหญ่ */
+    }
+}

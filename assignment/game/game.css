@@ -1,0 +1,118 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #fdd835, #e53935); 
+    color: #fdd835; 
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh; 
+}
+
+fieldset {
+    border: 2px solid #fdd835; 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.8); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+}
+
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #fdd835; 
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: #fdd835;
+    width: calc(100% - 24px); 
+    margin-bottom: 10px; 
+}
+
+
+select {
+    padding: 10px;
+    border: 2px solid #fdd835;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fdd835;
+    margin-bottom: 10px; 
+}
+
+button {
+    padding: 12px 20px;
+    margin: 10px 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fdd835; 
+    color: #1a1a1a; 
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+button:hover {
+    background-color: #e53935;
+    transform: scale(1.05); 
+}
+
+
+#timerClock {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fdd835; 
+}
+
+
+#container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#layer {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 3px solid #fdd835; 
+    box-shadow: 0 0 20px rgba(10, 0, 0, 0.3); 
+    overflow: hidden; 
+}
+
+
+.square {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 3px solid #000000; 
+}
+
+.maroon {
+    background-color: maroon; 
+}
+.lightgreen {
+    background-color: lightgreen; 
+}
+.magenta {
+    background-color: magenta; 
+}
+
+@media only screen and (max-width: 480px) {
+    fieldset {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    fieldset {
+        width: 80%; 
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    fieldset {
+        width: 40%;
+    }
+}
